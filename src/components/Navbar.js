@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="navbar border-bottom shadow-sm bg-white py-2 px-4 position-relative">
       <Link to="/" className="navbar-brand p-1 text-primary">
-        <span className="m-0 fw-bold">Web Social</span>
+        <span className="m-0 fw-bold">Social App</span>
       </Link>
       <div className="navbar__items d-flex align-items-center">
         <span className="c-pointer text-primary ms-4">
