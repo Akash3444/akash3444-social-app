@@ -47,7 +47,8 @@ const Navbar = () => {
         >
           <img src={plusIcon} height="25px" width="25px" />
         </span>
-        <div className="ms-4 d-flex align-items-center">
+        <div className="ms-4 d-flex align-items-center" 
+            onClick={() => history.push(`/${username}`)}>
           {profilePicture !== "" && profilePicture ? (
             <img src={profilePicture} />
           ) : (
