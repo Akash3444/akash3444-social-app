@@ -1,11 +1,15 @@
 import React from "react";
 import heartRounded from "./svg/heartRounded.svg";
 import comment from "./svg/comment.svg";
+import Image from "./Img";
 
 const Post = ({ image, caption, author }) => {
   return (
     <div className="post card mt-4 mb-4 col-12 p-0 w-100">
-      <div className="card-header bg-white py-2 px-3 d-flex align-items-center">
+      <div
+        className="card-header py-2 px-3 d-flex align-items-center"
+        style={{ background: "#fafafa" }}
+      >
         <img
           height="40"
           width="40"
@@ -13,11 +17,12 @@ const Post = ({ image, caption, author }) => {
         />
         <h6 className="m-0 ms-3 py-1 fs-6 fw-bold">{author}</h6>
       </div>
-      <img
+      <Image src={`https://bd5hq.sse.codesandbox.io/image/${image}`} />
+      {/*<img
         className="card-img-top d-block"
         style={{ maxWidth: "100%", height: "auto" }}
         src={`https://bd5hq.sse.codesandbox.io/image/${image}`}
-      />
+      />*/}
       <div className="card-body py-2 px-3">
         <img src={heartRounded} height="25" width="25" />
         <img className="ms-3" src={comment} height="25" width="25" />
