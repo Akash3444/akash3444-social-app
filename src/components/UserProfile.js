@@ -32,10 +32,10 @@ const UserProfile = () => {
   };
 
   return (
-    <div>
+    <div className="mt-3 mt-md-5">
       {userProfile.loading && (
         <div>
-          <span className="spinner spinner-border text-info" />
+          <span className="spinner spinner-border text-info d-block mx-auto" />
         </div>
       )}
 
@@ -81,7 +81,7 @@ const UserProfile = () => {
             </div>
           </div>
           {/* Post List */}
-          <div className="row">
+          <div className="row mt-5">
             {userProfile.data.posts &&
               userProfile.data.posts.length !== 0 &&
               userProfile.data.posts.map(post => (
@@ -96,6 +96,11 @@ const UserProfile = () => {
                   />
                 </div>
               ))}
+            {userProfile.data &&
+              userProfile.data.posts &&
+              userProfile.data.posts.length === 0 && (
+                <span className="d-block text-center"> No posts found </span>
+              )}
           </div>
         </div>
       )}
